@@ -1,0 +1,11 @@
+# Ignorar datos y logs
+data/
+logs/
+
+# Ignorar configuraciones locales (opcional)
+config/mongod.conf
+
+# Otros
+*.log
+*.swp
+.env  # Si usas variables de entorno

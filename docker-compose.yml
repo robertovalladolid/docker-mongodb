@@ -1,0 +1,23 @@
+services:
+  mongodb:
+    image: mongo:6.0  # Usa MongoDB 6.0 (última versión estable al 2025)
+    container_name: mongodb  # Nombre fijo del contenedor
+    restart: unless-stopped  # Reinicio automático (a menos que se detenga manualmente)
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: transformacion
+    ports:
+      - "28324:28324"  # Puerto personalizado mapeado correctamente
+    volumes:
+      - /sdb1/mongodb/data:/data/db  # Datos persistentes
+      - /sdb1/mongodb/config:/etc/mongo  # Configuraciones
+      - /sdb1/mongodb/logs:/var/log/mongodb  # Logs
+    command:
+      - "--wiredTigerCacheSizeGB=4"
+      - "--port=28324"  # Cambia el puerto interno de MongoDB
+    networks:
+      - mongo_net
+
+networks:
+  mongo_net:
+    driver: bridge
