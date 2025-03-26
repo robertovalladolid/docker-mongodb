@@ -1,8 +1,8 @@
-# 🐳 MongoDB Docker Compose Setup
+# MongoDB Docker Compose Setup
 
 Este repositorio contiene una configuración lista para desplegar **MongoDB 6.0** en un contenedor Docker usando Docker Compose, ideal para entornos de desarrollo y producción.
 
-## 📦 Características
+## Características
 
 - MongoDB 6.0 (LTS) con autenticación habilitada
 - Configuración optimizada para producción
@@ -10,7 +10,7 @@ Este repositorio contiene una configuración lista para desplegar **MongoDB 6.0*
 - Variables de entorno manejadas mediante `.env`
 - Compatible con CI/CD (GitHub Actions ejemplo incluido)
 
-## 🚀 Instalación Rápida
+## Instalación Rápida
 
 1. **Clonar el repositorio**:
    ```bash
